@@ -6,10 +6,16 @@ import Todo from "../my_components/Todo";
   return (
     <div className="container">
       <h3 className="text-center">To dos list </h3>
-       {props.todos.map((todoitm)=>{
-           return <Todo todoit={todoitm}key={todoitm.snu} ondelete={props.ondelete}/>
+
+      { props.todos.length===0? "NO TODOS TO DIPLAY" :
+      
+       
+        props.todos.map((todoitm)=>
+        {
+           return <Todo todoit={todoitm} key={todoitm.sno} ondelete={props.ondelete}/>
        }
-       )}
+       )
+       }
       
     </div>
   ) 
