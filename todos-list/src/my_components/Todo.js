@@ -5,7 +5,7 @@ const Todo = ({todoit,ondelete}) => {
     <div>
       <h4>{todoit.title}</h4> 
       <p>{todoit.desc}</p>
-      <button className="btn btn-danger" onClick={ondelete}>delete</button>
+      <button className="btn btn-danger" onClick={()=>{ondelete(todoit)}}>delete</button>
     </div>
   ) 
 }
